@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.wrap .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* LOGO */
+  /* HEADER */
+  /* TITLE */
+  /* CART & LIKE BTN */
+  /* CART */
+  /* ALCOHOL LIST */
+  /* VIDEO */
+}
+.wrap .inner .logo {
+  position: fixed;
+  top: 25px;
+  left: 30px;
+  z-index: 2;
+}
+.wrap .inner .logo img {
+  width: 120px;
+  height: 60px;
+}
+.wrap .inner header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  transform: translate(0, -100px);
+  z-index: 1;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .inner header .menu {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10%;
+  margin-left: 60px;
+  font-size: 18px;
+}
+.wrap .inner header .menu li {
+  margin-right: 45px;
+}
+.wrap .inner header .menu li a:visited {
+  color: #d96b1c;
+}
+.wrap .inner header .menu_bar {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+.wrap .inner .site_title {
+  position: absolute;
+  top: 30px;
+  right: 750px;
+}
+.wrap .inner .cart-icon {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 70px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 6;
+}
+.wrap .inner .heart {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  z-index: 6;
+}
+.wrap .inner .cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  box-shadow: -2px 0 4px hsla(0deg, 4%, 15%, 0.1);
+  z-index: 200;
+  transition: 0.5s;
+  font-family: "Cafe24SsurroundAir";
+}
+.wrap .inner .cart.active {
+  right: 0;
+}
+.wrap .inner .cart .cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.wrap .inner .cart .cart-content .cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.wrap .inner .cart .cart-content .cart-box .cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+.wrap .inner .cart .cart-content .cart-box .detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.wrap .inner .cart .cart-content .cart-box .detail-box .cart-product-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.wrap .inner .cart .cart-content .cart-box .detail-box .cart-price {
+  font-weight: 500;
+}
+.wrap .inner .cart .cart-content .cart-box .detail-box .cart-quantity {
+  border: 1px solid rgb(0, 0, 0);
+  outline-color: yellow;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.wrap .inner .cart .cart-content .cart-box .cart-remove {
+  font-size: 24px;
+  color: rgb(96, 95, 95);
+  cursor: pointer;
+}
+.wrap .inner .cart .total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid black;
+}
+.wrap .inner .cart .total .total-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.wrap .inner .cart .total .total-price {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+.wrap .inner .cart .btn-buy {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.wrap .inner .cart .btn-buy:hover {
+  background-color: rgb(19, 19, 19);
+}
+.wrap .inner .cart #close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+.wrap .inner .alcohols {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+  padding-bottom: 60px;
+}
+.wrap .inner .alcohols .alcohol__list {
+  padding-top: 70px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.wrap .inner .alcohols .alcohol__list .item {
+  width: 200px;
+  height: 350px;
+  margin: 40px;
+  perspective: 300px;
+}
+.wrap .inner .alcohols .alcohol__list .item .front {
+  width: 200px;
+  height: 350px;
+  margin: 40px;
+  text-align: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: 2s;
+  cursor: pointer;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .alcohol_img {
+  height: 225px;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-size: cover;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .add_cart {
+  opacity: 0;
+  width: 120px;
+  height: 35px;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -55%);
+  border-radius: 3px;
+  background: none;
+  color: #333;
+  border: none;
+  transition: all 1s ease;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .add_cart:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #d221fe 74%);
+  transition: all 0.3s ease;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .add_cart:hover {
+  background: transparent;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+  color: #fff;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .add_cart:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+}
+.wrap .inner .alcohols .alcohol__list .item .front:hover .add_cart {
+  display: inline;
+  opacity: 1;
+  top: 45%;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn {
+  display: none;
+  position: absolute;
+  top: 27px;
+  right: 10px;
+  font-size: 18px;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn .fill_heart {
+  color: red;
+  cursor: pointer;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn .fill_heart.hide {
+  display: none;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn .empty_heart {
+  cursor: pointer;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .like_btn .empty_heart.hide {
+  display: none;
+}
+.wrap .inner .alcohols .alcohol__list .item .front:hover .like_btn {
+  display: block;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .text {
+  width: 100%;
+  position: absolute;
+  top: 250px;
+  text-align: center;
+  color: #333;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .text .title {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .text .price {
+  display: block;
+}
+.wrap .inner .alcohols .alcohol__list .item .front .text .detail {
+  text-decoration: underline;
+}
+.wrap .inner .alcohols .alcohol__list .item .back {
+  width: 250px;
+  height: 450px;
+  margin: 30px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+  transition: 2s;
+  background-image: url("../src/img/말.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.wrap .inner .alcohols .alcohol__list .item .back .description {
+  width: 150px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  font-size: 17px;
+  line-height: 2;
+}
+.wrap .inner .alcohols .alcohol__list .item .back .cancel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.wrap .inner .alcohols .alcohol__list .item .back .cancel:hover {
+  color: red;
+}
+.wrap .inner .alcohol_video {
+  width: 40%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  left: 0;
+  top: 0;
+}
+.wrap .inner .alcohol_video .full_video {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: fill;
+}
+.wrap .inner .alcohol_video .video2 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: fill;
+  position: absolute;
+  left: -100%;
+}
+.wrap .inner .alcohol_video .video3 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: fill;
+  position: absolute;
+  bottom: -100%;
+}
+
+/*# sourceMappingURL=menu1_common.css.map */

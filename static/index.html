@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>채팅</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="chat-log">
+        <!-- 채팅기록 -->
+      </div>
+      <form id="messaging-form" action="">
+        <input type="text" id="my-message" placeholder="enter message" autocomplete="off" onkeyup="checkTyping()">
+        <button onclick="send()">전송</button>
+        <p>
+          <span class="notification"></span>
+        </p>
+      </form>
+    </div>
+  </body>
+  </html>

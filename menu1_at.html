@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>액티비티</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/menu1_common.css" />
+
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/82579c42bb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GREEN SAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+      integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- JS -->
+    <script defer src="./js/menu1.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="inner">
+        <!-- LOGO -->
+        <a href="./index.html" class="logo">
+          <img src="./src/img/다운로드.png" alt="logo" />
+        </a>
+
+        <!-- HEADER -->
+        <header>
+          <ul class="menu">
+            <li><a href="./menu1_feed.html">먹거리</a></li>
+            <li><a href="./menu1_at.html">액티비티</a></li>
+            <li><a href="./menu1_tradition.html">관광지</a></li>
+						<li><a href="http://localhost:5500">채팅</a></li>
+          </ul>
+        </header>
+
+        <!-- TITLE -->
+        <h1 class="site_title">액티비티</h1>
+
+        <!-- ICONS -->
+        <a href="#" class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a href="#" class="heart">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">예상 금액(1인)</h2>
+          <div class="cart-content"></div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">￦0</div>
+          </div>
+          <button type="button" class="btn-buy">Buy now</button>
+          <i class="far fa-window-close" id="close-cart"></i>
+        </div>
+
+        <!-- ALCOHOL LIST -->
+        <section class="alcohols">
+          <ul class="alcohol__list">
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at.png" class="alcohol_img" alt="카스" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">빅볼랜드</h3>
+                  <span class="price">￦35000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 애월읍 산록서로 15<br />
+                  연락처: (+82) 1588-6418<br />
+                  별점(5점): 3.0
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at2.png" class="alcohol_img" alt="액티비티" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">성읍랜드</h3>
+                  <span class="price">￦25000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 서귀포시 표선면 번영로 2650<br />
+                  연락처: (+82) 064-787-5324<br />
+                  별점(5점): 3.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at3.png" class="alcohol_img" alt="액티비티" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">제주레포츠랜드</h3>
+                  <span class="price">￦60000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 조천읍 와흘상서2길 47<br />
+                  연락처: (+82) 064-784-8800<br />
+                  별점(5점): 방문 X
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at4.png" class="alcohol_img" alt="액티비티" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">제주레일바이크</h3>
+                  <span class="price">￦30000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 구좌읍 용눈이오름로 641<br />
+                  연락처: (+82) 064-783-0033<br />
+                  별점(5점): 3.3
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at5.png" class="alcohol_img" alt="액티비티" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">레이저서바일M</h3>
+                  <span class="price">￦15000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 신광로 58 4층<br />
+                  연락처: (+82) 064-747-5422<br />
+                  별점(5점): 3.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at6.png" class="alcohol_img" alt="액티비티" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">제주하늘을날다</h3>
+                  <span class="price">￦90000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 도남로17길 32 영산홍아파트<br />
+                  연락처: (+82) 010-9632-0422<br />
+                  별점(5점): 3.8
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at7.png" class="alcohol_img" alt="액티비티" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">더마파크</h3>
+                  <span class="price">￦20000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 한림읍 월림7길 155<br />
+                  연락처: (+82) 064-795-8080<br />
+                  별점(5점): 방문 X
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at8.png" class="alcohol_img" alt="액티비티" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">9.81 파크</h3>
+                  <span class="price">￦39500원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 애월읍 천덕로 880-24<br />
+                  연락처: (+82) 064-1833-9810<br />
+                  별점(5점): 3.9
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/jj at9.png" class="alcohol_img" alt="액티비티" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">제주 실탄사격장</h3>
+                  <span class="price">￦35000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 서귀포시 소보리당로 164번길 62<br />
+                  연락처: (+82) 064-739-7007<br />
+                  별점(5점): 4
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at10.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">서귀포잠수함</h3>
+                  <span class="price">￦65000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 서귀포시 남성중로 40 (서홍동, 유람선매표소) 서귀포잠수함<br />
+                  별점(5점): 3.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at11.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">익스트림제주 카약올레</h3>
+                  <span class="price">￦15000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주시 애월읍 애월로1길 22<br />
+                  별점(5점): 4
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at12.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">제주라프 짚라인</h3>
+                  <span class="price">￦35000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 조천읍 선교로 117<br />
+                  연락처: (+82) 064-784-9030<br />
+                  별점(5점): 3
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at13.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">우도 잠수함</h3>
+                  <span class="price">￦55000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 서귀포시 성산읍 성산등용로 130-21<br />
+                  연락처: (+82) 064-784-2333<br />
+                  별점(5점): 3.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at14.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">스쿠버스쿨</h3>
+                  <span class="price">￦53000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>ㅉ
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 서해안로 301<br />
+                  연락처: (+82) 064-713-2711<br />
+                  별점(5점): 방문 X
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at15.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">제주제트</h3>
+                  <span class="price">￦25000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 서귀포시 대포로 172-5<br />
+                  연락처: (+82) 064-739-3939<br />
+                  별점(5점): 4.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at16.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">비체올린</h3>
+                  <span class="price">￦25000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주시 한경면 판조로 253-6<br />
+                  연락처: (+82) 064-773-0000<br />
+                  별점(5점): 3.6
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at17.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">김녕요트 투어</h3>
+                  <span class="price">￦60000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 제주시 구좌읍 구좌해안로 229-16<br />
+                  연락처: (+82) 064-782-5271~3<br />
+                  별점(5점): 방문 X
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/jj at18.png" class="alcohol_img" alt="액티비티"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">다이나믹메이즈</h3>
+                  <span class="price">￦14000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  주소: 제주특별자치도 서귀포시 표선면 번영로 2644<br />
+                  연락처: (+82) 064-787-8774<br />
+                  별점(5점): 방문 X
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ALCOHOL VIDEO -->
+        <section class="alcohol_video">
+          <video
+            src="./src/video/제주2.mp4" 
+            loop
+            autoplay
+            muted
+            class="full_video"
+          ></video>
+          <video
+            src="./src/video/propose_video.mp4"
+            class="video2"
+            loop
+            muted
+            autoplay
+          ></video>
+          <video
+            src="./src/video/제주4.mp4"
+            class="video3"
+            loop
+            muted
+            autoplay
+          ></video>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

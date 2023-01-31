@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>먹을거리</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/menu1_common.css" />
+
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/82579c42bb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GREEN SAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+      integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- JS -->
+    <script defer src="./js/menu1.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="inner">
+        <!-- LOGO -->
+        <a href="./index.html" class="logo">
+          <img src="./src/img/다운로드.png" alt="logo" />
+        </a>
+
+        <!-- HEADER -->
+        <header>
+          <ul class="menu">
+            <li><a href="./menu1_feed.html">먹을거리</a></li>
+            <li><a href="./menu1_at.html">액티비티</a></li>
+            <li><a href="./menu1_tradition.html">관광지</a></li>
+						<li><a href="http://localhost:5500">채팅</a></li>
+          </ul>
+        </header>
+
+        <!-- TITLE -->
+        <h1 class="site_title">먹을거리</h1>
+
+        <!-- ICONS -->
+        <a href="#" class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a href="#" class="heart">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+
+        <!-- CART -->
+        <div class="cart">
+          <h2 class="cart-title">예상 금액(1인)</h2>
+          <div class="cart-content"></div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">￦0</div>
+          </div>
+          <button type="button" class="btn-buy">Buy now</button>
+          <i class="far fa-window-close" id="close-cart"></i>
+        </div>
+
+        <!-- ALCOHOL LIST -->
+        <section class="alcohols">
+          <ul class="alcohol__list">
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/ju6.png" class="alcohol_img" alt="음식" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">숙성도</h3>
+                  <span class="price">￦21000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 돼지고기<br />
+                  웨이팅: 기본 30분<br />
+                  주소: 제주시 원노형로 41 1층<br />
+                  맛집별점(5점): 4.0
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/ju11.png" class="alcohol_img" alt="음식" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">우진해장국</h3>
+                  <span class="price">￦10000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 해장국<br />
+                  웨이팅: 기본 1시간<br />
+                  주소: 제주 제주시 서사로 11<br />
+                  맛집별점(5점): 4.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/ju12.png" class="alcohol_img" alt="음식" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">시골길</h3>
+                  <span class="price">￦20000원(소)</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 낙지볶음<br />
+                  웨이팅: 기본 30분<br />
+                  주소: 제주 제주시 연동13길 9<br />
+                  맛집별점(5점): 4.0
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju13.png"
+                  class="alcohol_img"
+                  alt="막걸리"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">만부정</h3>
+                  <span class="price">￦24000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 복어요리<br />
+                  웨이팅: 기본 30분<br />
+                  주소: 제주 제주시 사장길 38 만부정 9<br />
+                  맛집별점(5점): 4.0
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/그랜드.jpeg" class="alcohol_img" alt="음식" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">그랜드키친</h3>
+                  <span class="price">￦130000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 뷔페<br />
+                  웨이팅: 예약<br />
+                  주소: 제주 제주시 노연로 12 제주 드림타워 4층<br />
+                  맛집별점(5점): 3.9
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/ju15.png" class="alcohol_img" alt="음식" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">자구내</h3>
+                  <span class="price">￦17000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 향토음식<br />
+                  웨이팅: 기본 10분<br />
+                  주소: 제주 제주시 삼무로3길 18<br />
+                  맛집별점(5점): 3.8
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/ju16.png" class="alcohol_img" alt="음식" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">숯불덮밥 화리</h3>
+                  <span class="price">￦12000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 덮밥<br />
+                  웨이팅: 기본 20분<br />
+                  주소: 제주 제주시 애월읍 유수암평화5길 30<br />
+                  맛집별점(5점): 4.8
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/ju17.png" class="alcohol_img" alt="음식" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">월령작야 달의객잔</h3>
+                  <span class="price">￦28000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 이자까야<br />
+                  웨이팅: 기본 30분<br />
+                  주소: 제주 제주시 한림읍 월령3길 39-5 1층<br />
+                  맛집별점(5점): 4.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img src="./src/img/ju18.png" class="alcohol_img" alt="음식" />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">애파소</h3>
+                  <span class="price">￦9000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 커리<br />
+                  웨이팅: 기본 15분<br />
+                  주소: 제주 제주시 애월읍 애월로 118 2층<br />
+                  맛집별점(5점): 4.3
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju28.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">요리하는 키작은삼촌</h3>
+                  <span class="price">￦15000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 한식<br />
+                  웨이팅: 기본 20분<br />
+                  주소: 제주 서귀포시 성산읍 일주동로 4304 1층<br />
+                  맛집별점(5점): 4.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju20.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">광어다</h3>
+                  <span class="price">￦22000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 한식<br />
+                  웨이팅: 기본 10분<br />
+                  주소: 제주 서귀포시 표선면 민속해안로 73 광해수산2층<br />
+                  맛집별점(5점): 4.6
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju21.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">아루요</h3>
+                  <span class="price">￦9000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 일식<br />
+                  웨이팅: 기본 20분<br />
+                  주소: 제주 제주시 애월읍 유수암평화5길 15-8 아루요<br />
+                  맛집별점(5점): 4.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju29.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">금악정육식당</h3>
+                  <span class="price">￦변동원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 돼지고기<br />
+                  웨이팅: 기본 5분<br />
+                  주소: 제주 제주시 한림읍 중산간서로 4302<br />
+                  맛집별점(5점): 4.2
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju30.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">제주약수터</h3>
+                  <span class="price">￦6000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 맥주집<br />
+                  웨이팅: 기본 30분<br />
+                  주소: 제주 서귀포시 중앙로 35 1층<br />
+                  맛집별점(5점): 4.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju24.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">맨도릉돈까스</h3>
+                  <span class="price">￦12000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 돈까스<br />
+                  웨이팅: 기본 30분<br />
+                  주소: 제주 제주시 구좌읍 월정7길 58<br />
+                  맛집별점(5점): 4.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju25.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">치저스</h3>
+                  <span class="price">￦15000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 양식<br />
+                  웨이팅: 기본 30분<br />
+                  주소: 제주 제주시 구좌읍 비자림로 1785<br />
+                  맛집별점(5점): 4.4
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju26.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">호커센터</h3>
+                  <span class="price">￦20000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 싱가폴음식<br />
+                  웨이팅: 기본 120분<br />
+                  주소: 제주 제주시 애월읍 애월로11길 25-2 호커센터<br />
+                  맛집별점(5점): 4.6
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="front">
+                <img
+                  src="./src/img/ju27.png"
+                  class="alcohol_img"
+                  alt="음식"
+                />
+                <button class="add_cart">ADD CART</button>
+                <div class="like_btn">
+                  <i class="fa-solid fa-heart fill_heart hide"></i>
+                  <i class="fa-regular fa-heart empty_heart"></i>
+                </div>
+                <div class="text">
+                  <h3 class="title">신제주보말칼국수</h3>
+                  <span class="price">￦9000원</span>
+                  <span class="detail">상세정보</span>
+                </div>
+              </div>
+              <div class="back">
+                <p class="description">
+                  맛집: 칼국수<br />
+                  웨이팅: 기본 20분<br />
+                  주소: 제주 제주시 선덕로5길 19<br />
+                  맛집별점(5점): 4.5
+                </p>
+                <i class="fa-solid fa-xmark cancel"></i>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ALCOHOL VIDEO -->
+        <section class="alcohol_video">
+          <video
+            src="./src/video/videoju1.mp4"
+            loop
+            autoplay
+            muted
+            class="full_video"
+          ></video>
+          <video
+            src="./src/video/propose_video.mp4"
+            class="video2"
+            loop
+            muted
+            autoplay
+          ></video>
+          <video
+            src="./src/video/제주3.mp4"
+            class="video3"
+            loop
+            muted
+            autoplay
+          ></video>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

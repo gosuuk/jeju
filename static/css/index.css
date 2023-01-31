@@ -1,0 +1,87 @@
+#main {
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: lightblue;
+  text-align: center;
+  width: 500px;
+  height: 700px;
+}
+
+#chat {
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+#messaging-form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  display: flex;
+  width: 500px;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+#my-message {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+
+#mymessage:focus {
+  outline: none;
+}
+
+#form > button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+
+/* when new user connected */
+.join {
+  width: 90%;
+  margin: auto;
+  background-color: aquamarine;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* when someone disconnected */
+.disconnect {
+  width: 90%;
+  margin: auto;
+  background-color: indianred;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* message was sended by me */
+.myMessage {
+  width: 90%;
+  margin: auto;
+  background-color: lemonchiffon;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* message was sended by other user */
+.otherMessage {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}

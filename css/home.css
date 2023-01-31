@@ -1,0 +1,852 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* menu2.html 적용 font */
+/* h1 */
+@font-face {
+  font-family: "양진체";
+  src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: 'Shadows Into Light', cursive; */
+/* span */
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* p */
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* flow-word */
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* inside-page__btn */
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*common*/
+.hide {
+  opacity: 0;
+  transform: scale(0.4) translateX(700%);
+}
+
+body {
+  font-family: "Cafe24SsurroundAir";
+}
+body header {
+  position: relative;
+  z-index: 1;
+}
+body header .logo > img {
+  width: 150px;
+  position: absolute;
+  top: 20px;
+  left: 4%;
+}
+body header .search {
+  transition: 1.4s;
+  font-size: 20px;
+  position: relative;
+}
+body header .search > i {
+  position: absolute;
+  left: 85%;
+  top: 51px;
+  z-index: 5;
+  transition: 0.8s;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+body header .search > i.searchOn {
+  left: 50%;
+  transform: translate(-130px, 0);
+  color: #000;
+}
+body header .search #search_window {
+  position: absolute;
+  width: 240px;
+  height: 20px;
+  transition: 0.8s;
+  z-index: 1;
+  opacity: 0;
+  box-sizing: content-box;
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 8px;
+  padding-left: 30px;
+  font-family: "Cafe24SsurroundAir";
+  left: 50%;
+  top: 40px;
+  transform: translate(50%, 0);
+  pointer-events: none;
+}
+body header .search #search_window.searchOn {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+body header .search .btn--search {
+  position: absolute;
+  left: 72%;
+  top: 46px;
+  transition: 0.8s;
+  width: 50px;
+  height: 30px;
+  border: 2px solid orangered;
+  color: white;
+  background-color: orange;
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+}
+body header .search .btn--search.searchOn {
+  left: 50%;
+  transform: translateX(150px);
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+body header .searchNsns {
+  display: flex;
+  position: absolute;
+  right: 10%;
+  top: 50px;
+  cursor: pointer;
+}
+body header .searchNsns > li {
+  padding-left: 10px;
+}
+body header .searchNsns > li img {
+  width: 20px;
+}
+body header .register {
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  right: 4%;
+  top: 10px;
+}
+body header .register > li {
+  color: #fff;
+  padding-left: 5px;
+}
+body header .register > li > a {
+  color: #fff;
+}
+body header .register > li > a:hover {
+  text-decoration: underline;
+}
+body figure {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  /*SECTION-menu up*/
+  /*SECTION - login*/
+  /*login 변수 선언*/
+}
+body figure .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  top: 100%;
+  transition: 1.2s;
+  position: absolute;
+}
+body figure .bg > video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 1.2s;
+  object-fit: cover;
+}
+body figure .bg > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body figure .bg .slo {
+  font-family: "Shadows Into Light";
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+}
+body figure .bg.bg0 {
+  font-size: 9vw;
+  color: rgba(225, 86, 86, 0.6);
+}
+body figure .bg.bg0 .slo.bg0--slogan {
+  top: 40%;
+  left: 50%;
+}
+body figure .bg.bg0 .slo.bg0--slogan .quote0 {
+  transition: 4s;
+  opacity: 0;
+}
+body figure .bg.bg0 .slo.bg0--slogan .quote1 {
+  transition: 8s;
+  opacity: 0;
+}
+body figure .bg.bg1 {
+  font-size: 9vw;
+  color: rgba(237, 139, 34, 0.699);
+}
+body figure .bg.bg1 .slo.bg1--slogan {
+  top: 17%;
+  left: 5%;
+}
+body figure .bg.bg1 .slo.bg1--slogan .quote0 {
+  position: relative;
+  left: -1000%;
+  transition: 1.5s;
+  opacity: 0;
+}
+body figure .bg.bg1 .slo.bg1--slogan .quote0.on {
+  left: 0;
+  opacity: 1;
+}
+body figure .bg.bg1 .slo.bg1--slogan .quote1 {
+  position: relative;
+  left: -1000%;
+  transition: 3.5s;
+  opacity: 0;
+}
+body figure .bg.bg1 .slo.bg1--slogan .quote1.on {
+  left: 0;
+  opacity: 1;
+}
+body figure .bg.bg2 {
+  font-size: 9vw;
+  color: rgba(255, 255, 0, 0.5);
+}
+body figure .bg.bg2 .slo.bg2--slogan {
+  text-align: right;
+  top: 7%;
+  left: 45%;
+}
+body figure .bg.bg2 .slo.bg2--slogan .quote0 {
+  position: relative;
+  left: 100%;
+  transition: 3s;
+  opacity: 0;
+}
+body figure .bg.bg2 .slo.bg2--slogan .quote0.on {
+  left: 0%;
+  opacity: 1;
+}
+body figure .bg.bg2 .slo.bg2--slogan .quote1 {
+  position: relative;
+  left: 100%;
+  transition: 5s;
+  opacity: 0;
+}
+body figure .bg.bg2 .slo.bg2--slogan .quote1.on {
+  left: 0;
+  opacity: 1;
+}
+body figure .bg.bg3 {
+  background: linear-gradient(180deg, black, #ddd);
+  opacity: 1;
+  text-align: center;
+  cursor: none;
+}
+body figure .bg.bg3 video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+}
+body figure .bg.bg3 .cursor {
+  background-image: url("../src/img/click.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  animation: cursorAni linear 2s infinite;
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+body figure .bg.bg3 .slo.bg3--slogan {
+  color: white;
+  right: 10%;
+  top: 120px;
+  font-size: 15vw;
+  line-height: 1.5;
+  animation: textAni linear 7s infinite;
+}
+body figure .bg.bg3 .slo.bg3--slogan--hide {
+  display: inline-block;
+  transition: 2s;
+  color: white;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 15vw;
+  line-height: 1.5;
+  color: pink;
+  opacity: 0;
+}
+body figure .bg.bg3 ul > li > img.float_item {
+  position: absolute;
+  transition: 5s;
+  width: auto;
+  height: 200px;
+}
+body figure .bg.bg3 ul > li > img.float_item.img1 {
+  top: 12%;
+  left: 0%;
+  animation: float01 linear 3s infinite;
+}
+body figure .bg.bg3 ul > li > img.float_item.img1.on {
+  top: 60%;
+  left: 10%;
+}
+body figure .bg.bg3 ul > li > img.float_item.img2 {
+  top: 7%;
+  left: 73%;
+  animation: float01 linear 5s infinite;
+}
+body figure .bg.bg3 ul > li > img.float_item.img2.on {
+  top: 60%;
+  left: 20%;
+}
+body figure .bg.bg3 ul > li > img.float_item.img3 {
+  top: 70%;
+  left: 73%;
+  animation: float01 ease-in-out 6s infinite;
+}
+body figure .bg.bg3 ul > li > img.float_item.img3.on {
+  top: 60%;
+  left: 30%;
+}
+body figure .bg.bg3 ul > li > img.float_item.img4 {
+  left: 48%;
+  top: 1%;
+  animation: float02 linear 1s infinite;
+}
+body figure .bg.bg3 ul > li > img.float_item.img4.on {
+  top: 60%;
+  left: 40%;
+}
+body figure .bg.bg3 ul > li > img.float_item.img5 {
+  top: 65%;
+  left: 13%;
+  animation: float03 linear 3s infinite;
+}
+body figure .bg.bg3 ul > li > img.float_item.img5.on {
+  top: 60%;
+  left: 50%;
+}
+body figure .bg.bg3 ul > li > img.float_item.img6 {
+  top: 40%;
+  left: 45%;
+  animation: float02 linear 3s infinite;
+}
+body figure .bg.bg3 ul > li > img.float_item.img6.on {
+  top: 60%;
+  left: 60%;
+}
+body figure .bg.bg3 ul > li > img.float_item.img7 {
+  left: 25%;
+  top: 30%;
+  animation: float03 linear 5s infinite;
+}
+body figure .bg.bg3 ul > li > img.float_item.img7.on {
+  top: 60%;
+  left: 70%;
+}
+body figure .bg.bg3 ul > li > img.float_item.img8 {
+  top: 75%;
+  left: 40%;
+  animation: float03 linear 2s infinite;
+}
+body figure .bg.bg3 ul > li > img.float_item.img8.on {
+  top: 60%;
+  left: 80%;
+}
+@keyframes float01 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(10px, 15px);
+  }
+  40% {
+    transform: translate(20px, 8px);
+  }
+  60% {
+    transform: translate(8px, -3px);
+  }
+  80% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes float02 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-10px, 5px) rotate(10deg);
+  }
+  40% {
+    transform: translate(-20px, 8px) rotate(5deg);
+  }
+  60% {
+    transform: translate(-5px, -3px) rotate(0deg);
+  }
+  80% {
+    transform: translate(-9px, -9px) rotate(-8deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes float03 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-10px, 5px);
+  }
+  40% {
+    transform: translate(-20px, 8px);
+  }
+  60% {
+    transform: translate(-5px, -3px);
+  }
+  80% {
+    transform: translate(-9px, -9px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes textAni {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes textAni2 {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes cursorAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body figure .bg.viewOn {
+  top: 0;
+}
+body figure .bg.viewOutToUp {
+  top: -100%;
+}
+body figure .bg.viewOutToDown {
+  top: 0%;
+}
+body figure .wrap {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  /*SECTION-menu*/
+  /*SECTION*/
+  /*NAV-buttons*/
+}
+body figure .wrap.on {
+  filter: grayscale(100%);
+  pointer-events: none;
+  cursor: default;
+}
+body figure .wrap.menuOn {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0;
+  top: 300px;
+}
+body figure .wrap .rotate_menu {
+  width: 12vw;
+  height: 12vw;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  margin-left: -6vw;
+  margin-top: -6vw;
+  transition: 2s;
+}
+body figure .wrap .rotate_menu article {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body figure .wrap .rotate_menu article.on .inner {
+  opacity: 1;
+  transform: scale(1.3);
+}
+body figure .wrap .rotate_menu article .inner {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 2s;
+  transform: scale(0.8);
+  text-align: center;
+}
+body figure .wrap .rotate_menu article .inner > a {
+  display: inline-block;
+}
+body figure .wrap .rotate_menu article .inner > a > img {
+  height: 200px;
+}
+body figure .wrap .linear_menu {
+  position: absolute;
+  top: 30%;
+  width: 39%;
+  font-size: 30px;
+  left: 5%;
+}
+body figure .wrap .linear_menu .menu_list {
+  justify-content: center;
+}
+body figure .wrap .linear_menu .menu_list li {
+  position: absolute;
+  padding: 20px;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(1) {
+  top: 0;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(2) {
+  top: 10vh;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(3) {
+  top: 20vh;
+}
+body figure .wrap .linear_menu .menu_list li:nth-child(4) {
+  top: 30vh;
+  color: red;
+}
+body figure .wrap .linear_menu .menu_list li a {
+  color: rgba(247, 234, 234, 0.808);
+  transition: 0.4s;
+  opacity: 0.8;
+}
+body figure .wrap .linear_menu .menu_list li a:hover {
+  font-size: 28px;
+  opacity: 1;
+}
+body figure .wrap .explain {
+  width: 100%;
+}
+body figure .wrap .explain > ul {
+  width: 100%;
+}
+body figure .wrap .explain > ul > li {
+  width: 25%;
+  position: absolute;
+  opacity: 0;
+  transition: 2s;
+  bottom: 30%;
+  right: 5%;
+}
+body figure .wrap .explain > ul > li.on {
+  right: 15%;
+  opacity: 1;
+}
+body figure .wrap .explain > ul > li h2 {
+  font-size: 35px;
+  color: rgba(247, 234, 234, 0.808);
+  text-shadow: 1px 1px 3px rgba(255, 255, 47, 0.308);
+  margin-bottom: 8px;
+}
+body figure .wrap .explain > ul > li p {
+  color: rgba(117, 106, 93, 0.893);
+}
+body figure .wrap nav {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0;
+  cursor: pointer;
+  color: #fff;
+}
+body figure .wrap nav::after, body figure .wrap nav::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.628);
+  position: absolute;
+}
+body figure .wrap nav.btnPrev {
+  transform: translate(-90px, 0);
+}
+body figure .wrap nav.btnPrev::after {
+  transform-origin: left center;
+  transform: rotate(40deg);
+}
+body figure .wrap nav.btnPrev::before {
+  transform-origin: left center;
+  transform: rotate(-40deg);
+}
+body figure .wrap nav.btnPrev .btnPrev--opacity::after, body figure .wrap nav.btnPrev .btnPrev--opacity::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 10px;
+  background-color: #888;
+  width: 60%;
+  height: 1px;
+  transition: 0.5s;
+  opacity: 0;
+}
+body figure .wrap nav.btnPrev .btnPrev--opacity::after {
+  transform-origin: left center;
+  transform: rotate(40deg);
+}
+body figure .wrap nav.btnPrev .btnPrev--opacity::before {
+  transform-origin: left center;
+  transform: rotate(-40deg);
+}
+body figure .wrap nav.btnPrev:hover .btnPrev--opacity::after, body figure .wrap nav.btnPrev:hover .btnPrev--opacity::before {
+  opacity: 1;
+  left: -10px;
+}
+body figure .wrap nav.btnNext {
+  transform: translate(60px, 0);
+}
+body figure .wrap nav.btnNext::after {
+  transform-origin: right center;
+  transform: rotate(40deg);
+}
+body figure .wrap nav.btnNext::before {
+  transform-origin: right center;
+  transform: rotate(-40deg);
+}
+body figure .wrap nav.btnNext .btnNext--opacity::after, body figure .wrap nav.btnNext .btnNext--opacity::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  display: block;
+  background-color: #888;
+  width: 60%;
+  height: 1px;
+  transition: 0.5s;
+  opacity: 0;
+}
+body figure .wrap nav.btnNext .btnNext--opacity::after {
+  transform-origin: right center;
+  transform: rotate(40deg);
+}
+body figure .wrap nav.btnNext .btnNext--opacity::before {
+  transform-origin: right center;
+  transform: rotate(-40deg);
+}
+body figure .wrap nav.btnNext:hover .btnNext--opacity::after, body figure .wrap nav.btnNext:hover .btnNext--opacity::before {
+  opacity: 1;
+  left: 14px;
+}
+body figure .hide_up {
+  width: 30px;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+body figure .hide_up i {
+  transition: 0.5s;
+}
+body figure .hide_up.on {
+  pointer-events: none;
+  cursor: default;
+  color: gray;
+}
+body figure .hide_up.on i {
+  animation: none;
+}
+body figure .hide_up.on span {
+  animation: none;
+}
+body figure .hide_up i {
+  animation: blingbling linear 0.2s infinite;
+}
+body figure .hide_up span {
+  font-size: 7px;
+  animation: blingbling linear 0.2s infinite;
+}
+body figure .hide_up:hover {
+  color: pink;
+}
+body figure .hide_up:hover i {
+  animation: none;
+}
+body figure .hide_up:hover span {
+  animation: none;
+}
+body figure .login {
+  font-family: "Cafe24SsurroundAir";
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 5;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+  transition: 1.2s;
+}
+body figure .login .login--close {
+  font-size: 30px;
+  color: rgba(142, 95, 80, 0.995);
+  position: absolute;
+  top: 5px;
+  right: 25px;
+}
+body figure .login .login__box {
+  position: absolute;
+  top: 130px;
+  left: 20%;
+}
+body figure .login .login__box > i {
+  position: absolute;
+  color: rgba(142, 95, 80, 0.995);
+  z-index: 1;
+}
+body figure .login .login__box > i:nth-of-type(1) {
+  font-size: 20px;
+  top: 141px;
+  left: 20px;
+}
+body figure .login .login__box > i:nth-of-type(2) {
+  font-size: 17px;
+  top: 191px;
+  left: 20px;
+}
+body figure .login .login__box input {
+  display: inline-block;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+  padding: 20px;
+  padding-left: 30px;
+}
+body figure .login .login__box > input:nth-of-type(1) {
+  top: 130px;
+}
+body figure .login .login__box > input:nth-of-type(2) {
+  top: 180px;
+}
+body figure .login > img {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+body figure .login .login__btn {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 380px;
+  width: 250px;
+  height: 50px;
+  background-color: rgba(142, 95, 80, 0.995);
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 50px;
+  color: rgb(243, 228, 228);
+  text-align: center;
+  letter-spacing: 5px;
+}
+body figure .login .login__btn:active {
+  background-color: orangered;
+}
+body figure .login .login__register {
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  position: relative;
+  top: 450px;
+  justify-content: center;
+}
+body figure .login .login__register a {
+  color: #666;
+  padding: 0 10px;
+}
+body figure .login .login__register a:hover {
+  text-decoration: underline;
+}
+
+/*Animation*/
+@keyframes blingbling {
+  0% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 105, 180, 0.434);
+  }
+}
+/*# sourceMappingURL=home.css.map */

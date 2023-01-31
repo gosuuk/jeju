@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* menu2.html 적용 font */
+/* h1 */
+@font-face {
+  font-family: "양진체";
+  src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* span */
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* p */
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: 'Shadows Into Light', cursive; */
+/* hide_message COMMON */
+.hide_message {
+  position: relative;
+  /* 여기부터는 디자인 */
+  box-sizing: content-box;
+  width: 320px;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 30px;
+  color: white;
+  font-size: 5px/40px bold "arial";
+  text-align: center;
+}
+.hide_message.hide {
+  display: none;
+}
+.hide_message.id_issame {
+  background-color: rgba(40, 247, 178, 0.34);
+  color: rgb(95, 77, 56);
+  top: 0px;
+}
+.hide_message.id_isno {
+  background-color: rgba(255, 163, 209, 0.4274509804);
+  top: 0px;
+}
+.hide_message.id_form {
+  background-color: rgba(228, 119, 41, 0.425);
+  top: 0px;
+}
+.hide_message.pw_issame {
+  background-color: rgba(95, 77, 56, 0.4078431373);
+  color: #fff;
+}
+
+main {
+  height: 1200px;
+  width: 100%;
+  overflow-x: hidden;
+}
+main .inner {
+  height: 100%;
+  width: 850px;
+  background-color: whitesmoke;
+  margin: 0 auto;
+  position: relative;
+}
+main .inner > h1.title {
+  text-align: center;
+  position: relative;
+  top: 300px;
+  color: burlywood;
+  font-family: "Cafe24SsurroundAir";
+}
+main .inner .logo {
+  position: absolute;
+  top: 100px;
+  width: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+main .inner .input_box {
+  margin-top: 40px;
+  position: absolute;
+  width: 80%;
+  top: 300px;
+  left: 27%;
+}
+main .inner .input_box .test {
+  border: 0;
+  border-bottom: 2px solid burlywood;
+  height: 50px;
+  width: 350px;
+  background-color: rgba(210, 210, 210, 0.18);
+  font-size: 16px;
+  padding: 10px;
+  margin: 20px;
+}
+main .inner .input_box .test:focus {
+  outline-color: whitesmoke;
+  border-bottom: 2px solid rgb(164, 132, 90);
+}
+main .inner .input_box .same__btn {
+  width: 60px;
+  height: 30px;
+  border: none;
+  background-color: burlywood;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+main .inner .input_box .same__btn:active {
+  background-color: rgb(164, 132, 90);
+}
+main .inner .register__btn {
+  width: 350px;
+  height: 50px;
+  background-color: darkcyan;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 860px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+}
+main .inner .register__btn:active {
+  background-color: mediumaquamarine;
+}
+main .inner .sns_box {
+  position: relative;
+  top: 935px;
+  display: flex;
+  justify-content: center;
+}
+main .inner .sns_box img {
+  height: 30px;
+}
+main .inner .sns_box span {
+  vertical-align: bottom;
+  line-height: 30px;
+}
+main .inner .sns_box .sns_box__common {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 20px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.swal-button {
+  background-color: rgba(126, 102, 66, 0.9333333333);
+  font-size: 15px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*# sourceMappingURL=home_register.css.map */
