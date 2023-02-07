@@ -1,4 +1,4 @@
-const API_KET = //
+const API_KET = "";
 
 function onGeoOK(position) {
   const lat = position.coords.latitude;
