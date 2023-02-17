@@ -1,5 +1,5 @@
 async function getWeather() {
-  const apiKey = "6549303a99ecf540b8dedb1cf30bae76";
+  const apiKey = "";
   const city = 'jeju';
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
