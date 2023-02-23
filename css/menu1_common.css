@@ -108,6 +108,9 @@ a {
   box-shadow: -2px 0 4px hsla(0deg, 4%, 15%, 0.1);
   z-index: 200;
   transition: 0.5s;
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: scroll;
   font-family: "Cafe24SsurroundAir";
 }
 .wrap .inner .cart.active {
